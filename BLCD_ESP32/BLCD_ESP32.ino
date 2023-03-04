@@ -110,6 +110,7 @@ void loop() {
     case 0b101:
       commutation_step = 5;
       break;
+  }
 
 /*
   Mapeo de la señal analogica del potenciometro (acelerador) a un valor dentro de la resolucion de pwm 
