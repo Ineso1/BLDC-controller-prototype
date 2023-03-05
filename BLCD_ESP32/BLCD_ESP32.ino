@@ -13,27 +13,27 @@ Description: A BLDC controller xd
  
  /*
   Pinout:
-  - GPIO 25: Hall A
-  - GPIO 26: Hall B
+  - GPIO 12: Hall A
+  - GPIO 14: Hall B
   - GPIO 27: Hall C
-  - GPIO 12: PWM de la fase A
-  - GPIO 14: PWM de la fase B
-  - GPIO 27: PWM de la fase C
-  - GPIO 34: Pin del potenciómetro
+  - GPIO 26: PWM de la fase A
+  - GPIO 25: PWM de la fase B
+  - GPIO 33: PWM de la fase C
+  - GPIO 13: Pin del potenciómetro
  */
 
-const int pot_pin = 34;              // Potentiometer pin
+const int pot_pin = 13;              // Potentiometer pin
 const float pwm_min = 0.0;           // Minimum PWM duty cycle
 const float pwm_max = 255.0;         // Maximum PWM duty cycle
 const float pwm_frequency = 20000.0;  // PWM frequency in Hz
 const int num_poles = 8;              // Number of poles in the motor
 const int num_comm_steps = 6;         // Number of commutation steps
-const int hall_a_pin = 32;            // Hall sensor A pin
-const int hall_b_pin = 33;            // Hall sensor B pin
-const int hall_c_pin = 25;            // Hall sensor C pin
-const int pwm_pin_a = 16;             // PWM pin for phase A
-const int pwm_pin_b = 17;             // PWM pin for phase B
-const int pwm_pin_c = 18;             // PWM pin for phase C
+const int hall_a_pin = 12;            // Hall sensor A pin
+const int hall_b_pin = 14;            // Hall sensor B pin
+const int hall_c_pin = 27;            // Hall sensor C pin
+const int pwm_pin_a = 26;             // PWM pin for phase A
+const int pwm_pin_b = 25;             // PWM pin for phase B
+const int pwm_pin_c = 33;             // PWM pin for phase C
 
 /*
   Tabla de conmutación
@@ -65,6 +65,8 @@ const float commutation_table[num_comm_steps][3] = {
 */
 
 void setup() {
+  Serial.begin(9600);
+  
   pinMode(hall_a_pin, INPUT);
   pinMode(hall_b_pin, INPUT);
   pinMode(hall_c_pin, INPUT);
@@ -130,6 +132,11 @@ void loop() {
   ledcWrite(1, phase_b_duty);
   ledcWrite(2, phase_c_duty);
 
+  Serial.print(phase_a_duty);
+  Serial.print(" - ");
+  Serial.print(phase_b_duty);
+  Serial.print(" - ");
+  Serial.println(phase_c_duty);
   delay(10);
-  
+ 
 }
