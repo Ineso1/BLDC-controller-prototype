@@ -35,6 +35,12 @@ const int pwm_pin_a = 26;             // PWM pin for phase A
 const int pwm_pin_b = 25;             // PWM pin for phase B
 const int pwm_pin_c = 33;             // PWM pin for phase C
 
+//Fasess prueba
+const int pwm_pin_aa = 32;             // PWM pin for phase A
+const int pwm_pin_bb = 35;             // PWM pin for phase B
+const int pwm_pin_cc = 34;             // PWM pin for phase C
+
+
 /*
   Tabla de conmutación
 
@@ -43,6 +49,8 @@ const int pwm_pin_c = 33;             // PWM pin for phase C
   del motor.
 */
 
+
+/*
 const int commutation_table[num_comm_steps][3] = {
   {1, 0, 0},
   {1, 0, 1},
@@ -50,6 +58,17 @@ const int commutation_table[num_comm_steps][3] = {
   {0, 1, 1},
   {0, 1, 0},
   {1, 1, 0}
+};
+*/
+
+//Fases prueba
+const int commutation_table[num_comm_steps][6] = {
+  {0, 0, 1, 1, 0, 0},
+  {0, 1, 0, 1, 0, 0},
+  {0, 1, 0, 0, 0, 1},
+  {1, 0, 0, 0, 0, 1},
+  {1, 0, 0, 0, 1, 0},
+  {0, 0, 1, 0, 1, 0}
 };
 
 //Alternativa para conmutar fases con valores diferentes por fase de conmutacion
@@ -74,12 +93,25 @@ void setup() {
   pinMode(pwm_pin_b, OUTPUT);
   pinMode(pwm_pin_c, OUTPUT);
 
+  //.....Fases prueba
+  pinMode(pwm_pin_aa, OUTPUT);
+  pinMode(pwm_pin_bb, OUTPUT);
+  pinMode(pwm_pin_cc, OUTPUT);
+
   ledcSetup(0, pwm_frequency, 12);
   ledcSetup(1, pwm_frequency, 12);
   ledcSetup(2, pwm_frequency, 12);
   ledcAttachPin(pwm_pin_a, 0);
   ledcAttachPin(pwm_pin_b, 1);
   ledcAttachPin(pwm_pin_c, 2);
+  
+  //.....Fases prueba
+  ledcSetup(3, pwm_frequency, 12);
+  ledcSetup(4, pwm_frequency, 12);
+  ledcSetup(5, pwm_frequency, 12);
+  ledcAttachPin(pwm_pin_aa, 3);
+  ledcAttachPin(pwm_pin_bb, 4);
+  ledcAttachPin(pwm_pin_cc, 5);
 
 }
 
@@ -127,16 +159,35 @@ void loop() {
   float phase_a_duty = commutation_table[commutation_step][0] * pwm_duty;
   float phase_b_duty = commutation_table[commutation_step][1] * pwm_duty;
   float phase_c_duty = commutation_table[commutation_step][2] * pwm_duty;
+  
+  //.......Fases prueba
+  float phase_aa_duty = commutation_table[commutation_step][3] * pwm_max;
+  float phase_bb_duty = commutation_table[commutation_step][4] * pwm_max;
+  float phase_cc_duty = commutation_table[commutation_step][5] * pwm_max;
 
   ledcWrite(0, phase_a_duty);
   ledcWrite(1, phase_b_duty);
   ledcWrite(2, phase_c_duty);
+  
+  //.......Fases prueba
+  ledcWrite(3, phase_aa_duty);
+  ledcWrite(4, phase_bb_duty);
+  ledcWrite(5, phase_cc_duty);
+
 
   Serial.print(phase_a_duty);
   Serial.print(" - ");
   Serial.print(phase_b_duty);
   Serial.print(" - ");
-  Serial.println(phase_c_duty);
+  Serial.print(phase_c_duty);
+  
+  //........Fases prueba
+  Serial.print(" ---- ");
+  Serial.print(phase_aa_duty);
+  Serial.print(" - ");
+  Serial.print(phase_bb_duty);
+  Serial.print(" - ");
+  Serial.println(phase_cc_duty);
   delay(10);
  
 }
