@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE eagle SYSTEM "eagle.dtd">
+<eagle>
+    <drawing>
+        <grid unitdist="mm" unit="mm"/>
+        <layers>
+            <layer name="Top" color="4" number="1" visible="yes" active="yes" fill="1"/>
+            <layer name="tKeepout" color="0" number="4" visible="yes" active="yes" fill="1"/>
+            <layer name="Bottom" color="4" number="16" visible="yes" active="yes" fill="1"/>
+            <layer name="tPlace" color="7" number="21" visible="yes" active="yes" fill="1"/>
+            <layer name="bPlace" color="7" number="22" visible="yes" active="yes" fill="1"/>
+            <layer name="tNames" color="7" number="25" visible="yes" active="yes" fill="1"/>
+            <layer name="bNames" color="7" number="26" visible="yes" active="yes" fill="1"/>
+            <layer name="tValues" color="7" number="27" visible="yes" active="yes" fill="1"/>
+            <layer name="bValues" color="7" number="28" visible="yes" active="yes" fill="1"/>
+            <layer name="tStop" color="7" number="29" visible="yes" active="yes" fill="1"/>
+            <layer name="bStop" color="7" number="30" visible="yes" active="yes" fill="1"/>
+            <layer name="tCream" color="7" number="31" visible="yes" active="yes" fill="1"/>
+            <layer name="bCream" color="7" number="32" visible="yes" active="yes" fill="1"/>
+            <layer name="bKeepout" color="0" number="40" visible="yes" active="yes" fill="1"/>
+            <layer name="tRestrict" color="4" number="41" visible="yes" active="yes" fill="1"/>
+            <layer name="bRestrict" color="4" number="42" visible="yes" active="yes" fill="1"/>
+            <layer name="tDocu" color="7" number="51" visible="yes" active="yes" fill="1"/>
+            <layer name="bDocu" color="7" number="52" visible="yes" active="yes" fill="1"/>
+            <layer name="Nets" color="2" number="91" visible="yes" active="yes" fill="1"/>
+            <layer name="Busses" color="1" number="92" visible="yes" active="yes" fill="1"/>
+            <layer name="Pins" color="2" number="93" visible="yes" active="yes" fill="1"/>
+            <layer name="Symbols" color="4" number="94" visible="yes" active="yes" fill="1"/>
+            <layer name="Names" color="7" number="95" visible="yes" active="yes" fill="1"/>
+            <layer name="Values" color="7" number="96" visible="yes" active="yes" fill="1"/>
+            <layer name="Info" color="7" number="97" visible="yes" active="yes" fill="1"/>
+            <layer name="Guide" color="6" number="98" visible="yes" active="yes" fill="1"/>
+        </layers>
+        <library name="Upverter Library">
+            <description>Upverter Parts Library
+
+Created by Upverter.com</description>
+            <packages>
+                <package name="INFINEON_IRFB3077PBF_0">
+                    <description>N-Channel 75 V 120A (Tc) 370W (Tc) Through Hole TO-220AB</description>
+                    <wire layer="51" y2="5.45" width="0.15" x2="-2.275" y1="-5.45" x1="-2.275"/>
+                    <wire layer="51" y2="5.45" width="0.15" x2="2.275" y1="5.45" x1="-2.275"/>
+                    <wire layer="51" y2="-5.45" width="0.15" x2="2.275" y1="5.45" x1="2.275"/>
+                    <wire layer="51" y2="-5.45" width="0.15" x2="-2.275" y1="-5.45" x1="2.275"/>
+                    <wire layer="41" y2="5.55" width="0.1" x2="-2.375" y1="-5.55" x1="-2.375"/>
+                    <wire layer="41" y2="5.55" width="0.1" x2="2.375" y1="5.55" x1="-2.375"/>
+                    <wire layer="41" y2="-5.55" width="0.1" x2="2.375" y1="5.55" x1="2.375"/>
+                    <wire layer="41" y2="-5.55" width="0.1" x2="-2.375" y1="-5.55" x1="2.375"/>
+                    <wire layer="21" y2="5.2" width="0.3" x2="2.275" y1="-5.2" x1="2.275"/>
+                    <wire layer="21" y2="4.5" width="0.15" x2="-2.275" y1="5.2" x1="2.275"/>
+                    <wire layer="21" y2="-5.2" width="0.15" x2="2.275" y1="-4.5" x1="-2.275"/>
+                    <wire layer="21" y2="-4.5" width="0.15" x2="-2.275" y1="4.5" x1="-2.275"/>
+                    <text layer="25" align="bottom-left" y="5.225" x="2.625" rot="R270" size="1.0">&gt;NAME</text>
+                    <circle y="5.975" x="-0.705" layer="21" radius="0.25" width="0.0"/>
+                    <pad diameter="1.85" name="1" shape="square" drill="1.2" y="2.54" x="-0.705" rot="R0"/>
+                    <pad diameter="1.85" name="2" shape="round" drill="1.2" y="0.0" x="-0.705" rot="R0"/>
+                    <pad diameter="1.85" name="3" shape="round" drill="1.2" y="-2.54" x="-0.705" rot="R0"/>
+                </package>
+            </packages>
+            <symbols>
+                <symbol name="INFINEON_IRFB3077PBF_0_0">
+                    <description>N-Channel 75 V 120A (Tc) 370W (Tc) Through Hole TO-220AB</description>
+                    <wire layer="94" y2="-2.54" width="0.508" x2="1.016" y1="-7.62" x1="1.016"/>
+                    <wire layer="94" y2="-2.54" width="0.508" x2="1.778" y1="-3.556" x1="1.778"/>
+                    <wire layer="94" y2="-7.112" width="0.508" x2="5.08" y1="-7.112" x1="1.778"/>
+                    <wire layer="94" y2="-3.048" width="0.508" x2="5.08" y1="-3.048" x1="1.778"/>
+                    <wire layer="94" y2="-5.08" width="0.508" x2="5.08" y1="-5.08" x1="2.54"/>
+                    <wire layer="94" y2="-4.318" width="0.508" x2="3.556" y1="-5.08" x1="2.286"/>
+                    <wire layer="94" y2="-5.842" width="0.508" x2="3.556" y1="-5.08" x1="2.286"/>
+                    <wire layer="94" y2="-5.842" width="0.508" x2="3.556" y1="-4.318" x1="3.556"/>
+                    <wire layer="94" y2="-5.588" width="0.508" x2="3.302" y1="-4.826" x1="3.302"/>
+                    <wire layer="94" y2="-7.62" width="0.508" x2="1.778" y1="-6.604" x1="1.778"/>
+                    <wire layer="94" y2="-5.588" width="0.508" x2="1.778" y1="-4.572" x1="1.778"/>
+                    <wire layer="94" y2="-7.112" width="0.508" x2="6.858" y1="-7.112" x1="5.08"/>
+                    <wire layer="94" y2="-3.048" width="0.508" x2="6.858" y1="-7.112" x1="6.858"/>
+                    <wire layer="94" y2="-3.048" width="0.508" x2="5.08" y1="-3.048" x1="6.858"/>
+                    <wire layer="94" y2="-5.588" width="0.508" x2="6.35" y1="-4.572" x1="6.858"/>
+                    <wire layer="94" y2="-5.588" width="0.508" x2="7.366" y1="-5.588" x1="6.35"/>
+                    <wire layer="94" y2="-4.572" width="0.508" x2="6.858" y1="-5.588" x1="7.366"/>
+                    <wire layer="94" y2="-4.572" width="0.508" x2="7.366" y1="-4.572" x1="6.858"/>
+                    <wire layer="94" y2="-4.318" width="0.508" x2="7.62" y1="-4.572" x1="7.366"/>
+                    <wire layer="94" y2="-4.572" width="0.508" x2="6.35" y1="-4.572" x1="6.858"/>
+                    <wire layer="94" y2="-4.826" width="0.508" x2="6.096" y1="-4.572" x1="6.35"/>
+                    <wire layer="94" y2="-5.08" width="0.15" x2="1.016" y1="-5.08" x1="0.0"/>
+                    <wire layer="94" y2="-5.08" width="0.15" x2="5.08" y1="-5.08" x1="5.08"/>
+                    <wire layer="94" y2="-3.048" width="0.15" x2="5.08" y1="-2.54" x1="5.08"/>
+                    <text layer="95" align="top-left" y="-2.54" x="10.922" rot="R0" size="2.54">&gt;NAME</text>
+                    <text layer="95" align="top-left" y="-5.334" x="10.922" rot="R0" size="2.54">IRFB3077PBF</text>
+                    <pin direction="pas" name="G" visible="pad" length="middle" y="-5.08" x="-5.08"/>
+                    <pin direction="out" name="S" visible="pad" length="middle" y="-10.16" x="5.08" rot="R90"/>
+                    <pin direction="pas" name="D" visible="pad" length="middle" y="2.54" x="5.08" rot="R270"/>
+                    <circle y="-3.048" x="5.08" layer="94" radius="0.254" width="0.254"/>
+                    <circle y="-7.112" x="5.08" layer="94" radius="0.254" width="0.254"/>
+                </symbol>
+            </symbols>
+            <devicesets>
+                <deviceset prefix="Q" name="INFINEON_IRFB3077PBF">
+                    <description>N-Channel 75 V 120A (Tc) 370W (Tc) Through Hole TO-220AB</description>
+                    <gates>
+                        <gate name="G$0" symbol="INFINEON_IRFB3077PBF_0_0" x="0"/>
+                    </gates>
+                    <devices>
+                        <device name="INFINEON_IRFB3077PBF_0_0" package="INFINEON_IRFB3077PBF_0">
+                            <connects>
+                                <connect gate="G$0" pad="1" pin="G"/>
+                                <connect gate="G$0" pad="2" pin="D"/>
+                                <connect gate="G$0" pad="3" pin="S"/>
+                            </connects>
+                            <technologies>
+                                <technology>
+                                    <attribute name="mouser_part_number" value="942-IRFB3077PBF"/>
+                                    <attribute name="depletion_mode" value="False"/>
+                                    <attribute name="turn_on_delay_time" value="25ns"/>
+                                    <attribute name="pulse_drain_current" value="850A"/>
+                                    <attribute name="mfg_package_ident_rev" value="904"/>
+                                    <attribute name="max_junction_temp" value="+175°C"/>
+                                    <attribute name="temperature_range_high" value="+175°C"/>
+                                    <attribute name="MPN" value="IRFB3077PBF"/>
+                                    <attribute name="gate_to_source_voltage" value="20V"/>
+                                    <attribute name="digikey_description" value="MOSFET N-CH 75V 120A TO220AB"/>
+                                    <attribute name="device_class_L3" value="MOSFETs"/>
+                                    <attribute name="device_class_L1" value="Discrete Semiconductors"/>
+                                    <attribute name="digikey_part_number" value="IRFB3077PBF-ND"/>
+                                    <attribute name="prefix" value="Q"/>
+                                    <attribute name="drain_to_source_resistance" value="2.8mΩ"/>
+                                    <attribute name="reverse_recovery_time" value="42ns"/>
+                                    <attribute name="verification_version" value="0.0.0.3"/>
+                                    <attribute name="reverse_recovery_charge" value="59nC"/>
+                                    <attribute name="threshold_vgs_max" value="4V"/>
+                                    <attribute name="drain_to_source_voltage" value="75V"/>
+                                    <attribute name="datasheet" value="https://www.infineon.com/dgdl/Infineon-IRFB3077-DataSheet-v01_01-EN.pdf?fileId=5546d462533600a4015356153f0d1def"/>
+                                    <attribute name="power_dissipation" value="370W"/>
+                                    <attribute name="footprint_url" value="https://www.infineon.com/cms/en/product/packages/PG-TO220/PG-TO220-3-904/"/>
+                                    <attribute name="automotive" value="No"/>
+                                    <attribute name="technology" value="NA"/>
+                                    <attribute name="lead_free" value="Yes"/>
+                                    <attribute name="height" value="19.15mm"/>
+                                    <attribute name="threshold_vgs_min" value="2V"/>
+                                    <attribute name="number_of_N_channels" value="1"/>
+                                    <attribute name="mfg_package_ident" value="PG-TO220-3"/>
+                                    <attribute name="drain_to_source_breakdown_voltage" value="75V"/>
+                                    <attribute name="footprint_variant_name_0" value="Recommended_Land_Pattern"/>
+                                    <attribute name="device_class_L2" value="Transistors"/>
+                                    <attribute name="continuous_drain_current" value="210A"/>
+                                    <attribute name="input_capacitace_at_vds" value="9400pF @ 50V"/>
+                                    <attribute name="temperature_range_low" value="-55°C"/>
+                                    <attribute name="rohs" value="Yes"/>
+                                    <attribute name="gate_charge_at_vgs" value="160nC @ 10V"/>
+                                    <attribute name="centroid_not_specified" value="No"/>
+                                    <attribute name="standoff_height" value="3.56mm"/>
+                                    <attribute name="mfg_package_ident_date" value="0"/>
+                                    <attribute name="turn_off_delay_time" value="69ns"/>
+                                    <attribute name="number_of_channels" value="1"/>
+                                    <attribute name="MF" value="Infineon"/>
+                                    <attribute name="rthja_max" value="62°C/W"/>
+                                    <attribute name="package" value="TO-220AB"/>
+                                    <attribute name="max_forward_diode_voltage" value="1.3V"/>
+                                    <attribute name="mfg_package_ident_component_id" value="23a5373a371ebf18"/>
+                                </technology>
+                            </technologies>
+                        </device>
+                    </devices>
+                </deviceset>
+            </devicesets>
+        </library>
+    </drawing>
+</eagle>
