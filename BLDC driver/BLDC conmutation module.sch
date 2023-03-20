@@ -8557,31 +8557,31 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <part name="U2" library="IR2183" deviceset="IR2183" device=""/>
 <part name="Q1" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
 <part name="Q2" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
-<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N5400" device="" package3d_urn="urn:adsk.eagle:package:43365/2"/>
-<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
 <part name="U3" library="IR2183" deviceset="IR2183" device=""/>
-<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
 <part name="D2" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N5400" device="" package3d_urn="urn:adsk.eagle:package:43365/2"/>
-<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
 <part name="U4" library="IR2183" deviceset="IR2183" device=""/>
-<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
 <part name="D3" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N5400" device="" package3d_urn="urn:adsk.eagle:package:43365/2"/>
-<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
+<part name="C6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="1nF"/>
+<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
+<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
 <part name="Q3" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
 <part name="Q4" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
-<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
+<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
+<part name="R4" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
 <part name="Q5" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
 <part name="Q6" library="Infineon - IRFB3077PBF" deviceset="INFINEON_IRFB3077PBF" device="INFINEON_IRFB3077PBF_0_0"/>
-<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
-<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2"/>
+<part name="R5" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
+<part name="R6" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/2" value="100"/>
 <part name="D4" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="1N5400" device="" package3d_urn="urn:adsk.eagle:package:43365/2"/>
-<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
-<part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
-<part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1"/>
+<part name="C7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="480uF"/>
+<part name="C8" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="480uF"/>
+<part name="C9" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="025-050X050" package3d_urn="urn:adsk.eagle:package:23633/1" value="480uF"/>
 <part name="X1" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2-H" device="" package3d_urn="urn:adsk.eagle:package:9901/1"/>
 <part name="X2" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2-H" device="" package3d_urn="urn:adsk.eagle:package:9901/1"/>
 <part name="X3" library="con-ptr500" library_urn="urn:adsk.eagle:library:181" deviceset="AK500/2-H" device="" package3d_urn="urn:adsk.eagle:package:9901/1"/>
@@ -8853,27 +8853,10 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <wire x1="119.38" y1="68.58" x2="106.68" y2="68.58" width="0.1524" layer="91"/>
 <label x="106.68" y="68.58" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="VS_1" class="0">
 <segment>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="162.56" y1="71.12" x2="157.48" y2="71.12" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="71.12" x2="157.48" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VS"/>
-<wire x1="157.48" y1="76.2" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
-<junction x="162.56" y="71.12"/>
-<label x="170.18" y="71.12" size="1.778" layer="95" xref="yes"/>
-</segment>
-<segment>
-<pinref part="C6" gate="G$1" pin="2"/>
-<wire x1="162.56" y1="-20.32" x2="157.48" y2="-20.32" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="-20.32" x2="157.48" y2="-15.24" width="0.1524" layer="91"/>
-<pinref part="U4" gate="G$1" pin="VS"/>
-<wire x1="157.48" y1="-15.24" x2="144.78" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="-20.32" x2="170.18" y2="-20.32" width="0.1524" layer="91"/>
-<junction x="162.56" y="-20.32"/>
-<label x="170.18" y="-20.32" size="1.778" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D32"/>
+<wire x1="53.34" y1="20.32" x2="58.42" y2="20.32" width="0.1524" layer="91"/>
+<label x="58.42" y="20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="HO_1" class="0">
@@ -8944,17 +8927,10 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <wire x1="119.38" y1="22.86" x2="106.68" y2="22.86" width="0.1524" layer="91"/>
 <label x="106.68" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="VS_2" class="0">
 <segment>
-<pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="162.56" y1="25.4" x2="157.48" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="157.48" y1="25.4" x2="157.48" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="U3" gate="G$1" pin="VS"/>
-<wire x1="157.48" y1="30.48" x2="144.78" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="162.56" y1="25.4" x2="170.18" y2="25.4" width="0.1524" layer="91"/>
-<junction x="162.56" y="25.4"/>
-<label x="170.18" y="25.4" size="1.778" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="D35"/>
+<wire x1="53.34" y1="15.24" x2="58.42" y2="15.24" width="0.1524" layer="91"/>
+<label x="58.42" y="15.24" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="LO_1" class="0">
@@ -9031,6 +9007,11 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <wire x1="119.38" y1="-22.86" x2="106.68" y2="-22.86" width="0.1524" layer="91"/>
 <label x="106.68" y="-22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="D34"/>
+<wire x1="53.34" y1="12.7" x2="58.42" y2="12.7" width="0.1524" layer="91"/>
+<label x="58.42" y="12.7" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="PHASE_1" class="0">
 <segment>
@@ -9041,6 +9022,16 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <junction x="27.94" y="-68.58"/>
 <wire x1="27.94" y1="-68.58" x2="40.64" y2="-68.58" width="0.1524" layer="91"/>
 <label x="40.64" y="-68.58" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C2" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="71.12" x2="157.48" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="71.12" x2="157.48" y2="76.2" width="0.1524" layer="91"/>
+<pinref part="U2" gate="G$1" pin="VS"/>
+<wire x1="157.48" y1="76.2" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="71.12" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
+<junction x="162.56" y="71.12"/>
+<label x="170.18" y="71.12" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$7" class="0">
@@ -9067,6 +9058,16 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <wire x1="104.14" y1="-68.58" x2="116.84" y2="-68.58" width="0.1524" layer="91"/>
 <label x="116.84" y="-68.58" size="1.778" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="25.4" x2="157.48" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="25.4" x2="157.48" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="VS"/>
+<wire x1="157.48" y1="30.48" x2="144.78" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="25.4" x2="170.18" y2="25.4" width="0.1524" layer="91"/>
+<junction x="162.56" y="25.4"/>
+<label x="170.18" y="25.4" size="1.778" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="N$6" class="0">
 <segment>
@@ -9091,6 +9092,16 @@ Es handelt sich hierbei um AK500 in horizontaler Ausführung.</description>
 <junction x="180.34" y="-68.58"/>
 <wire x1="180.34" y1="-68.58" x2="193.04" y2="-68.58" width="0.1524" layer="91"/>
 <label x="193.04" y="-68.58" size="1.778" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="C6" gate="G$1" pin="2"/>
+<wire x1="162.56" y1="-20.32" x2="157.48" y2="-20.32" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="-20.32" x2="157.48" y2="-15.24" width="0.1524" layer="91"/>
+<pinref part="U4" gate="G$1" pin="VS"/>
+<wire x1="157.48" y1="-15.24" x2="144.78" y2="-15.24" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="-20.32" x2="170.18" y2="-20.32" width="0.1524" layer="91"/>
+<junction x="162.56" y="-20.32"/>
+<label x="170.18" y="-20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$11" class="0">
