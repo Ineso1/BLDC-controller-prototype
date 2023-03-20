@@ -25,7 +25,7 @@ Description: A BLDC controller xd
 const int pot_pin = 13;              // Potentiometer pin
 const float pwm_min = 0.0;           // Minimum PWM duty cycle
 const float pwm_max = 255.0;         // Maximum PWM duty cycle
-const float pwm_frequency = 20000.0;  // PWM frequency in Hz
+const float pwm_frequency = 10.0;  // PWM frequency in Hz
 const int num_poles = 8;              // Number of poles in the motor
 const int num_comm_steps = 6;         // Number of commutation steps
 const int hall_a_pin = 12;            // Hall sensor A pin
@@ -98,13 +98,14 @@ void setup() {
   pinMode(pwm_pin_bb, OUTPUT);
   pinMode(pwm_pin_cc, OUTPUT);
 
+
   ledcSetup(0, pwm_frequency, 12);
   ledcSetup(1, pwm_frequency, 12);
   ledcSetup(2, pwm_frequency, 12);
   ledcAttachPin(pwm_pin_a, 0);
   ledcAttachPin(pwm_pin_b, 1);
   ledcAttachPin(pwm_pin_c, 2);
-  
+
   //.....Fases prueba
   ledcSetup(3, pwm_frequency, 12);
   ledcSetup(4, pwm_frequency, 12);
@@ -159,7 +160,7 @@ void loop() {
   float phase_a_duty = commutation_table[commutation_step][0] * pwm_duty;
   float phase_b_duty = commutation_table[commutation_step][1] * pwm_duty;
   float phase_c_duty = commutation_table[commutation_step][2] * pwm_duty;
-  
+
   //.......Fases prueba
   float phase_aa_duty = commutation_table[commutation_step][3] * pwm_max;
   float phase_bb_duty = commutation_table[commutation_step][4] * pwm_max;
@@ -168,19 +169,18 @@ void loop() {
   ledcWrite(0, phase_a_duty);
   ledcWrite(1, phase_b_duty);
   ledcWrite(2, phase_c_duty);
-  
+
   //.......Fases prueba
   ledcWrite(3, phase_aa_duty);
   ledcWrite(4, phase_bb_duty);
   ledcWrite(5, phase_cc_duty);
-
 
   Serial.print(phase_a_duty);
   Serial.print(" - ");
   Serial.print(phase_b_duty);
   Serial.print(" - ");
   Serial.print(phase_c_duty);
-  
+
   //........Fases prueba
   Serial.print(" ---- ");
   Serial.print(phase_aa_duty);
@@ -189,5 +189,4 @@ void loop() {
   Serial.print(" - ");
   Serial.println(phase_cc_duty);
   delay(10);
- 
 }
