@@ -61,6 +61,7 @@ const int commutation_table[num_comm_steps][3] = {
 };
 */
 
+/*
 //Fases prueba
 const int commutation_table[num_comm_steps][6] = {
   {0, 0, 1, 1, 0, 0},
@@ -70,6 +71,19 @@ const int commutation_table[num_comm_steps][6] = {
   {1, 0, 0, 0, 1, 0},
   {0, 0, 1, 0, 1, 0}
 };
+*/
+
+
+//Fases prueba nuestro gate driver
+const int commutation_table[num_comm_steps][6] = {
+  {0, 1, 1, 0, 0, 1},
+  {0, 1, 1, 0, 1, 0},
+  {1, 1, 0, 0, 1, 0},
+  {1, 1, 0, 1, 0, 0},
+  {1, 0, 1, 1, 0, 0},
+  {1, 0, 1, 0, 0, 1}
+};
+
 
 //Alternativa para conmutar fases con valores diferentes por fase de conmutacion
 /*
