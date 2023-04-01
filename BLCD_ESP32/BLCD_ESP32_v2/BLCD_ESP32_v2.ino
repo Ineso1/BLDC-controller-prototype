@@ -117,9 +117,9 @@ void setup() {
 */
 
 void loop() {
-  int hall_a_val = digitalRead(hall_a_pin);
-  int hall_b_val = digitalRead(hall_b_pin);
-  int hall_c_val = digitalRead(hall_c_pin);
+  int hall_a_val = !digitalRead(hall_a_pin);
+  int hall_b_val = !digitalRead(hall_b_pin);
+  int hall_c_val = !digitalRead(hall_c_pin);
   int hall_state = (hall_a_val << 2) | (hall_b_val << 1) | hall_c_val;
   int commutation_step = 0;
   switch (hall_state) {
@@ -158,18 +158,18 @@ void loop() {
   float phase_c_duty = commutation_table[commutation_step][2] * pwm_duty;
 
   //.......Fases prueba
-  float phase_aa_duty = commutation_table[commutation_step][3] * pwm_max;
-  float phase_bb_duty = commutation_table[commutation_step][4] * pwm_max;
-  float phase_cc_duty = commutation_table[commutation_step][5] * pwm_max;
+  int phase_aa_duty = commutation_table[commutation_step][3];
+  int phase_bb_duty = commutation_table[commutation_step][4];
+  int phase_cc_duty = commutation_table[commutation_step][5];
 
   //HIGH
   analogWrite(pwm_pin_a, phase_a_duty);
   analogWrite(pwm_pin_b, phase_b_duty);
   analogWrite(pwm_pin_c, phase_c_duty);
   //LOW
-  analogWrite(pwm_pin_aa, phase_aa_duty);
-  analogWrite(pwm_pin_bb, phase_bb_duty);
-  analogWrite(pwm_pin_cc, phase_cc_duty);
+  digitalWrite(pwm_pin_aa, phase_aa_duty);
+  digitalWrite(pwm_pin_bb, phase_bb_duty);
+  digitalWrite(pwm_pin_cc, phase_cc_duty);
 
   Serial.print(phase_a_duty);
   Serial.print(" - ");
