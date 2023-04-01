@@ -110,6 +110,22 @@ void setup() {
   pinMode(pwm_pin_bb, OUTPUT);
   pinMode(pwm_pin_cc, OUTPUT);
 
+  /* version esp32 */
+  ledcSetup(0, pwm_frequency, 12);
+  ledcSetup(1, pwm_frequency, 12);
+  ledcSetup(2, pwm_frequency, 12);
+  ledcAttachPin(pwm_pin_a, 0);
+  ledcAttachPin(pwm_pin_b, 1);
+  ledcAttachPin(pwm_pin_c, 2);
+
+  ledcSetup(3, pwm_frequency, 12);
+  ledcSetup(4, pwm_frequency, 12);
+  ledcSetup(5, pwm_frequency, 12);
+  ledcAttachPin(pwm_pin_aa, 3);
+  ledcAttachPin(pwm_pin_bb, 4);
+  ledcAttachPin(pwm_pin_cc, 5);
+  /*............................*/
+
 }
 
 /*
@@ -157,11 +173,23 @@ void loop() {
   float phase_b_duty = commutation_table[commutation_step][1] * pwm_duty;
   float phase_c_duty = commutation_table[commutation_step][2] * pwm_duty;
 
-  //.......Fases prueba
-  int phase_aa_duty = commutation_table[commutation_step][3];
-  int phase_bb_duty = commutation_table[commutation_step][4];
-  int phase_cc_duty = commutation_table[commutation_step][5];
+  int phase_aa_duty = commutation_table[commutation_step][3] * pwm_max;
+  int phase_bb_duty = commutation_table[commutation_step][4] * pwm_max;
+  int phase_cc_duty = commutation_table[commutation_step][5] * pwm_max;
 
+
+  /*  version esp32 */
+  ledcWrite(0, phase_a_duty);
+  ledcWrite(1, phase_b_duty);
+  ledcWrite(2, phase_c_duty);
+  ledcWrite(3, phase_aa_duty);
+  ledcWrite(4, phase_bb_duty);
+  ledcWrite(5, phase_cc_duty);
+  /*............................*/
+
+
+  /*version arduino*/
+  /*
   //HIGH
   analogWrite(pwm_pin_a, phase_a_duty);
   analogWrite(pwm_pin_b, phase_b_duty);
@@ -170,6 +198,7 @@ void loop() {
   digitalWrite(pwm_pin_aa, phase_aa_duty);
   digitalWrite(pwm_pin_bb, phase_bb_duty);
   digitalWrite(pwm_pin_cc, phase_cc_duty);
+  /*............................*/
 
   Serial.print(phase_a_duty);
   Serial.print(" - ");
