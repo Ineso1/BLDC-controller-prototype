@@ -76,11 +76,12 @@ const int commutation_table_decode[num_comm_steps][6] = {
 //Fases prueba nuestro gate driver
 const int commutation_table[num_comm_steps][6] = {
   {0, 1, 1, 0, 0, 1},
-  {0, 1, 1, 0, 1, 0},
-  {1, 1, 0, 0, 1, 0},
-  {1, 1, 0, 1, 0, 0},
+  {1, 0, 1, 0, 0, 1},
   {1, 0, 1, 1, 0, 0},
-  {1, 0, 1, 0, 0, 1}
+  {1, 1, 0, 1, 0, 0},
+  {1, 1, 0, 0, 1, 0},
+  {0, 1, 1, 0, 1, 0}
+  
 };
 
 
@@ -141,22 +142,22 @@ void loop() {
   int commutation_step = 0;
   switch (hall_state) {
     case 0b110:
-      commutation_step = 5;
-      break;
-    case 0b010:
       commutation_step = 0;
       break;
-    case 0b011:
+    case 0b010:
       commutation_step = 1;
       break;
-    case 0b001:
+    case 0b011:
       commutation_step = 2;
       break;
-    case 0b101:
+    case 0b001:
       commutation_step = 3;
       break;
-    case 0b100:
+    case 0b101:
       commutation_step = 4;
+      break;
+    case 0b100:
+      commutation_step = 5;
       break;
   }
 
