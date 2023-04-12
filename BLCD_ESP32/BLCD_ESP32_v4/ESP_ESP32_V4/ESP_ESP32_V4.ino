@@ -1,4 +1,4 @@
-//Codigo oficial 
+//Official Code 
 /**********************************************
 
 Project Name: BLDC controller
@@ -28,16 +28,16 @@ const int pot_pin = 4;              // Potentiometer pin
 const float pwm_min = 0.0;           // Minimum PWM duty cycle
 const float pwm_max = 255.0;         // Maximum PWM duty cycle
 const float pwm_frequency = 20000;  // PWM frequency in Hz
-const int num_poles = 8;              // Number of poles in the motor
 const int num_comm_steps = 7;         // Number of commutation steps
 const int hall_a_pin = 21;            // Hall sensor A pin
 const int hall_b_pin = 19;            // Hall sensor B pin
 const int hall_c_pin = 13;            // Hall sensor C pin
+
+//PWM write pins
 const int pwm_pin_c = 26;             // PWM pin for phase A
 const int pwm_pin_b = 32;             // PWM pin for phase B
 const int pwm_pin_a = 27;             // PWM pin for phase C
 
-//Fases prueba
 const int pwm_pin_cc = 25;             // PWM pin for phase A
 const int pwm_pin_bb = 33;             // PWM pin for phase B
 const int pwm_pin_aa = 12;             // PWM pin for phase C
