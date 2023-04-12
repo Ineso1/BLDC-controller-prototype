@@ -130,6 +130,10 @@ void loop() {
   int pot_val = analogRead(pot_pin);
   float pwm_duty = map(pot_val, 0, 4095, pwm_min, pwm_max);
 
+  if(pot_val < 60){
+    commutation_step = 6;
+  }
+
   AH = commutation_table[commutation_step][0];
   AL = commutation_table[commutation_step][3];
   BH = commutation_table[commutation_step][1];
