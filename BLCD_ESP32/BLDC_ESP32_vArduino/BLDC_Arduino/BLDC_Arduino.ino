@@ -30,14 +30,14 @@ const float pwm_frequency = 1000;  // PWM frequency in Hz
 const int num_poles = 8;              // Number of poles in the motor
 const int num_comm_steps = 7;         // Number of commutation steps
 const int hall_a_pin = 8;            // Hall sensor A pin
-const int hall_b_pin = 9;            // Hall sensor B pin
+const int hall_b_pin = 13;            // Hall sensor B pin
 const int hall_c_pin = 10;            // Hall sensor C pin
-const int pwm_pin_c = 3;             // PWM pin for phase A
-const int pwm_pin_b = 5;             // PWM pin for phase B
-const int pwm_pin_a = 6;             // PWM pin for phase C
+const int pwm_pin_c = 9;             // PWM pin for phase A
+const int pwm_pin_b = 5;             // PWM pin for phase B //7
+const int pwm_pin_a = 6;             // PWM pin for phase C //5
 
 //Fasess prueba
-const int pwm_pin_cc = 4;             // PWM pin for phase A
+const int pwm_pin_cc = 2;             // PWM pin for phase A
 const int pwm_pin_bb = 7;             // PWM pin for phase B
 const int pwm_pin_aa = 12;             // PWM pin for phase C
 
@@ -151,22 +151,22 @@ void loop() {
   int commutation_step = 0;
   switch (hall_state) {
     case 0b101:
-      commutation_step = 1;
+      commutation_step = 0;
       break;
     case 0b001:
-      commutation_step = 2;
+      commutation_step = 1;
       break;
     case 0b011:
-      commutation_step = 3;
+      commutation_step = 2;
       break;
     case 0b010:
-      commutation_step = 4;
+      commutation_step = 3;
       break;
     case 0b110:
-      commutation_step = 5;
+      commutation_step = 4;
       break;
     case 0b100:
-      commutation_step = 0;
+      commutation_step = 5;
       break;
     default:
       commutation_step = 6;
@@ -234,8 +234,8 @@ void loop() {
   digitalWrite(pwm_pin_aa, phase_aa_duty);
   digitalWrite(pwm_pin_bb, phase_bb_duty);
   digitalWrite(pwm_pin_cc, phase_cc_duty);
+  //delayMicroseconds(5);
 
-/*
   Serial.print(pot_val);
   Serial.print("\t--");
   Serial.print(pwm_duty);
@@ -266,6 +266,6 @@ void loop() {
   Serial.print(" - ");
   Serial.println(phase_cc_duty);
   //delay(10);
+ 
   
-*/
 }

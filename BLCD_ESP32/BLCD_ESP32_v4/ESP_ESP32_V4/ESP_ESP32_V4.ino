@@ -27,20 +27,20 @@ Description: A BLDC controller version 3
 const int pot_pin = 4;              // Potentiometer pin
 const float pwm_min = 0.0;           // Minimum PWM duty cycle
 const float pwm_max = 255.0;         // Maximum PWM duty cycle
-const float pwm_frequency = 20000;  // PWM frequency in Hz
+const float pwm_frequency = 2000;  // PWM frequency in Hz
 const int num_comm_steps = 7;         // Number of commutation steps
 const int hall_a_pin = 21;            // Hall sensor A pin
 const int hall_b_pin = 19;            // Hall sensor B pin
 const int hall_c_pin = 13;            // Hall sensor C pin
 
 //PWM write pins
-const int pwm_pin_c = 26;             // PWM pin for phase A
+const int pwm_pin_c = 27;             // PWM pin for phase A //27
 const int pwm_pin_b = 32;             // PWM pin for phase B
-const int pwm_pin_a = 27;             // PWM pin for phase C
+const int pwm_pin_a = 26;             // PWM pin for phase C //26
 
-const int pwm_pin_cc = 25;             // PWM pin for phase A
+const int pwm_pin_cc = 12;             // PWM pin for phase A //12
 const int pwm_pin_bb = 33;             // PWM pin for phase B
-const int pwm_pin_aa = 12;             // PWM pin for phase C
+const int pwm_pin_aa = 25;             // PWM pin for phase C //25
 
 
 int AH, AL, BH, BL, CH, CL;
@@ -63,7 +63,7 @@ const int commutation_table[num_comm_steps][7] = {
 
 
 void setup() {
-  //Serial.begin(9600);
+  Serial.begin(9600);
   
   pinMode(hall_a_pin, INPUT);
   pinMode(hall_b_pin, INPUT);
@@ -128,11 +128,11 @@ void loop() {
 */
 
   int pot_val = analogRead(pot_pin);
-  float pwm_duty = map(pot_val, 0, 4095, pwm_min, pwm_max);
+  float pwm_duty = map(pot_val, 80, 4095, pwm_min, pwm_max);
 
-  if(pot_val < 60){
+  /*if(pot_val < 60){
     commutation_step = 6;
-  }
+  }*/
 
   AH = commutation_table[commutation_step][0];
   AL = commutation_table[commutation_step][3];
@@ -156,6 +156,37 @@ void loop() {
   digitalWrite(pwm_pin_aa, phase_aa_duty);
   digitalWrite(pwm_pin_bb, phase_bb_duty);
   digitalWrite(pwm_pin_cc, phase_cc_duty);
+
+  Serial.print(pot_val);
+  Serial.print("\t--");
+  Serial.print(pwm_duty);
+  Serial.print("\t--");
+  Serial.print(hall_c_val);
+  Serial.print("\t---");
+  Serial.print(hall_a_val);
+  Serial.print(" - ");
+  Serial.print(hall_b_val);
+  Serial.print(" - ");
+  Serial.print(hall_c_val);
+  Serial.print("\t---");
+    
+  //Serial.println(hall_state, BIN);
+
+  Serial.print("\t|||\t");
+  Serial.print(phase_a_duty);
+  Serial.print(" - ");
+  Serial.print(phase_b_duty);
+  Serial.print(" - ");
+  Serial.print(phase_c_duty);
+
+  //........Fases prueba
+  Serial.print(" ---- ");
+  Serial.print(phase_aa_duty);
+  Serial.print(" - ");
+  Serial.print(phase_bb_duty);
+  Serial.print(" - ");
+  Serial.println(phase_cc_duty);
+  //delay(10);
 
 
 }
